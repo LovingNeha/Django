@@ -1,0 +1,34 @@
+    {% extends "FirstApp/base.html" %}
+    {% block content %}
+ 
+    
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First_Name</th>
+                <th>Department_Name</th>
+                <th>Position</th>
+                <th>View</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in a%}
+            <tr>
+                <td>{{a.id}}</td>
+                <td>{{a.first_name}}</td>
+                <td>{{a.Depart}}</td>
+                <td>{{a.position}}</td>
+                <td><a class="btn btn-primary" href="/empdetail/{{a.pk}}">View</a></td>
+                <td><a class="btn btn-success" href="/empdetail/update/{{a.pk}}">Update</a></td>
+                <td><a class="btn btn-warning" href="/empdelete/{{a.pk}}">Delete</a></td>
+            </tr>
+            {% endfor %}   
+
+        </tbody>   
+    
+    </table>
+        
+    {% endblock %}
