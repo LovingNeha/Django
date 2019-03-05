@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 @login_required()
-def kane(request):
+def kane( request ):
     template='FirstApp/vn.html'
     ob=Employee.objects.all()
     context={
